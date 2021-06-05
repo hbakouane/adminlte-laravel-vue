@@ -1,0 +1,324 @@
+/*
+Template Name: Admin Template
+Author: Niravjoshi / Wrappixel
+File: scss
+*/
+
+// sparkline
+.jqstooltip {
+-webkit-box-sizing: content-box;
+-moz-box-sizing: content-box;
+box-sizing: content-box;
+}
+
+// Tooltip for the chartist chart charts
+.chartist-tooltip {
+    position: absolute;
+    display: inline-block;
+    opacity: 0;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    background: $info;
+    color: $white;
+    ext-align: center;
+    pointer-events: none;
+    z-index: 1;
+    -webkit-transition: opacity .2s linear;
+    -moz-transition: opacity .2s linear;
+    -o-transition: opacity .2s linear;
+    transition: opacity .2s linear;
+}
+
+.chartist-tooltip:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -5px;
+    border: 5px solid transparent;
+    border-top-color: $info;
+}
+
+.chartist-tooltip.tooltip-show {
+    opacity: 1;
+}
+
+
+
+// Custom select
+.custom-select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    background-size: auto;
+}
+
+
+//material-icon
+.m-icon {
+    width: 33%;
+    display: inline-block;
+}
+
+@include media-breakpoint-down(sm) {
+    .m-icon {
+        width: 100%;
+    }
+}
+
+//font-awesome icon
+.m-icon {
+    cursor: pointer;
+    padding: 13px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+        background-color: $gray-100;
+    }
+}
+
+.error-box {
+    height: 100%;
+    position: fixed;
+    top: 20%;
+    background-color: $white;
+    width: 100%;
+    .error-body {
+        padding-top: 5%;
+    }
+    .error-title {
+        font-size: 210px;
+        font-weight: 900;
+        // text-shadow: 4px 4px 0 #fff, 6px 6px 0 $dark;
+        line-height: 210px;
+    }
+    h3 {
+        line-height: 30px;
+        font-size: 21px;
+        margin: 10px 0;
+        font-weight: 300;
+    }
+}
+
+.campaign{
+    position: relative;
+    height: 250px;
+    .ct-series-a .ct-area { 
+        fill-opacity:0.2;
+        fill: url(#gradient); 
+    }
+    .ct-series-a .ct-line, .ct-series-a .ct-point{
+        stroke: $cyan;   
+        stroke-width:2px;  
+    }
+    .ct-series-b .ct-area{
+        fill: $primary;
+        fill-opacity:0.1; 
+    }
+    .ct-series-b .ct-line, .ct-series-b .ct-point {
+        stroke: $primary;
+        stroke-width:2px; 
+    }
+    .ct-series-a .ct-point, .ct-series-b .ct-point{
+        stroke-width:6px;
+    } 
+}
+
+// comment-center 
+.comment-center {
+    margin: 0 -25px;
+    .comment-body {
+        padding: 20px 25px;
+        border-bottom: 1px solid rgba(120,130,140,.13);
+        &:hover {
+            background: #f7fafc;
+        }
+        .user-img {
+            .img-circle {
+                border-radius: 50%;
+                width: 40px;
+            }
+        }
+        .mail-contnet {
+            padding-left: 15px;
+            font-weight: 300;
+            .time {
+                font-size: 12px;
+                color: #98a6ad;
+            }
+            .mail-desc {
+                font-size: 14px;
+                line-height: 25px;
+                color: #848a96;
+            }
+        }
+    }
+}
+
+// chat listing
+.card {
+    background-color: $white;
+    .card-heading {
+        color: #263238;
+        background-color: $white;
+        border-bottom: 1px solid rgba(120,130,140,.13);
+        font-weight: 500;
+        font-size: 16px;
+        padding: 20px 25px;
+    }
+    .card-body {
+        padding: 25px;
+        color:#263238;
+        .chatonline {
+            padding: 0;
+            list-style: none;
+            li {
+                padding: 13px 0;
+                position: relative;
+                .call-chat {
+                    position: absolute;
+                    right: 0;
+                    display: none;
+                    .btn-circle {
+                        .btn-lg {
+                            width: 50px;
+                            height: 50px;
+                            padding: 10px 16px;
+                            border-radius: 25px;
+                            font-size: 18px;
+                            line-height: 1.33;
+                            .fa {
+                                color: $white;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    .call-chat {
+                        display: block;
+                    }
+                }
+                a {
+                    width: 100%;
+                }
+                img {
+                    width: 40px;
+                    margin-right: 10px;
+                    border-radius: 50%;
+                }
+                small {
+                        font-size: 10px;
+                    }
+            }
+        }
+    }
+}
+
+// profile user-card
+.user-bg {
+    margin: -25px;
+    height: 230px;
+    overflow: hidden;
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .overlay-box {
+        background: #707cd2;
+        opacity: .9;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        text-align: center;
+        .user-content {
+            padding: 15px;
+            margin-top: 30px;
+            .thumb-lg {
+                height: 88px;
+                width: 88px;
+                border-radius: 50%;
+            }
+            .text-white {
+                font-weight: 300;
+            }
+            h4 {
+                line-height: 22px;
+                font-size: 18px;
+            }
+            h5 {
+                font-size: 14px;
+            }
+        }
+    }
+}
+.card-body {
+    padding: 40px 0 10px;
+    h1 {
+        line-height: 48px;
+        font-size: 36px;
+        font-weight: 300;
+    }
+}
+
+// google map
+.gmaps {
+    height: 300px;
+    background: #e4e7ea;
+    border-radius: 3px;
+}
+
+// ct visit chart
+#ct-visits {
+    position: relative;
+}
+#ct-visits .ct-series-a .ct-line,
+#ct-visits .ct-series-a .ct-point {
+    stroke: #98a6ad;
+}
+#ct-visits .ct-series-b .ct-line,
+#ct-visits .ct-series-b .ct-point {
+    stroke: #41b3f9;
+}
+#ct-visits .ct-series-a .ct-area {
+    fill: #98a6ad;
+    fill-opacity: 0.05;
+}
+#ct-visits .ct-series-b .ct-area {
+    fill: #41b3f9;
+    fill-opacity: 0.1;
+}
+#ct-visits .ct-line {
+    stroke-width: 2px;
+} 
+
+.icon-list-demo {
+    .col-sm-6 {
+        cursor: pointer;
+        line-height: 60px;
+        white-space: nowrap;
+        background-color: transparent;
+        &.f-icon {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        i {
+            font-size: 18px;
+            margin: 0 15px 0 10px;
+            width: auto;
+            transition: all .3s ease 0s;
+        }
+        &:hover {
+            background-color: #f7fafc;
+            color: #263238;
+            i {
+                font-size: 2em;
+            }
+        }
+    }
+}

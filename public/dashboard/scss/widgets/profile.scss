@@ -1,0 +1,61 @@
+.profiletimeline {
+    position: relative;
+    padding-left: 40px;
+    margin: 40px 10px 0 30px;
+    border-left: 1px solid $border-color;
+    .sl-left {
+        float: $lft;
+        margin-left: -60px;
+        z-index: 1;
+        margin-right: 15px;
+        img {
+            max-width: 40px;
+        }
+    }
+}
+
+.profiletimeline .sl-item {
+    margin-top: 8px;
+    margin-bottom: 30px;
+}
+
+.profiletimeline .sl-date {
+    font-size: 12px;
+    color: $text-muted;
+}
+
+// form
+.form-horizontal {
+    .form-group {
+        .btn-success {
+            color: $white;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        label {
+            font-weight: 500;
+        }
+        .form-control, .form-select {
+            background-color: rgba(0,0,0,0);
+            background-position: center bottom,center calc(99%);
+            background-repeat: no-repeat;
+            background-size: 0 2px,100% 1px;
+            padding: 0;
+            transition: background 0s ease-out 0s;
+            &:focus {
+                background-image: linear-gradient(#707cd2,#707cd2),linear-gradient(rgba(120,130,140,.13),rgba(120,130,140,.13));
+                border: 0;
+                border-radius: 0;
+                box-shadow: none;
+                float: none;
+                background-size: 100% 2px,100% 1px;
+                outline: 0;
+                transition-duration: .3s;
+            }
+            &::placeholder {
+                font-weight: 300;
+            }
+        }
+    }
+}
