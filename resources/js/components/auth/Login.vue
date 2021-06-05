@@ -29,7 +29,7 @@
 
                         <div class="row">
                             <div class="col-12">
-                                <button type="button" class="btn btn-primary btn-block" @click="validate($event)">Register</button>
+                                <button type="button" class="btn btn-primary btn-block" @click="validate($event)">Login</button>
                             </div>
                             <!-- /.col -->
                         </div>
