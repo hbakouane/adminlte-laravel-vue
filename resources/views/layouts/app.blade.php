@@ -40,7 +40,7 @@
     <div class="wrapper" id="app">
         <Container :user="{{ auth()->user()->tojson() }}" domain="{{ env('APP_URL') }}">
             <template v-slot:breadcrumbs>
-                @include('partials.breadcrumbs', ['title' => 'Dashboard', 'items' => $breadcrumbs ?? []])
+                @include('partials.breadcrumbs', ['title' => $title ?? '', 'items' => $breadcrumbs ?? []])
             </template>
             <template v-slot:content>
                 @yield('content')

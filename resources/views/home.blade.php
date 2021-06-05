@@ -3,8 +3,11 @@
 @section('content')
 
 @php
+    $title = "Home";
     $breadcrumbs = [
-        'Home' => ['url' => '/home']
+        'First' => ['url' => '/first'],
+        'Second' => ['url' => '/second'],
+        'Third' => ['url' => '/third']
     ];
 @endphp
 
